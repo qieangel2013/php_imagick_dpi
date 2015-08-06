@@ -5,7 +5,7 @@
         date_default_timezone_set('PRC');
         $YMD=date('Ymd',strtotime("-1 day")); 
         $YMDf=date('Y-m-d',strtotime("-1 day")); 
-        $con = mysql_connect("rdsyanyyuabe2mv.mysql.rds.aliyuncs.com","hbdiytop","yM3NESvPEiHtjvIs");
+        $con = mysql_connect("com","","s");
         mysql_query("set names 'utf8'");//编码转化
         $database='hbdb';
         $data=array();
