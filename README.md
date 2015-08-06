@@ -1,8 +1,8 @@
 PHP把非dpi转化为dpi图片
 ===================================
 ### 使用方法如下：
-        $filename = $path_pre.'/Uploads/Uploads/'.$YMD.'/'.$v['cate_id'].'/'.$v['attri_name'].'/'.$lspatharr[0].'-'.$v['updateid'].'.'.$lspatharr[1];
-      $file = file_get_contents($filename);
+                        $filename = $path_pre.'/Uploads/Uploads/'.$YMD.'/'.$v['cate_id'].'/'.$v['attri_name'].'/'.$lspatharr[0].'-'.$v['updateid'].'.'.$lspatharr[1];
+                        $file = file_get_contents($filename);
                         //数据块长度为9
                     $len = pack("N", 9);
                     //数据块类型标志为pHYs
@@ -27,10 +27,11 @@ PHP把非dpi转化为dpi图片
                          fclose($filedata);//关闭
                          echo "图片压缩成功！";
                     }
-### imagick把灰度图片转化为rgb图片
-   $im_get=new \Imagick($path_pre.'/Uploads/Uploads/'.$YMD.'/'.$v['cate_id'].'/'.$v['attri_name'].'/'.$lspatharr[0].'-'.$v['updateid'].'.'.$lspatharr[1]);
-                     $im_sta=$im_get->getImageColorspace();
-                     if(2==$im_sta){
+                    
+### imagick把灰度图片转化为rgb图片：
+                        $im_get=new \Imagick($path_pre.'/Uploads/Uploads/'.$YMD.'/'.$v['cate_id'].'/'.$v['attri_name'].'/'.$lspatharr[0].'-'.$v['updateid'].'.'.$lspatharr[1]);
+                        $im_sta=$im_get->getImageColorspace();
+                        if(2==$im_sta){
                          list($bg_width,$bg_height)=getimagesize($path_pre.'/Uploads/Uploads/'.$YMD.'/'.$v['cate_id'].'/'.$v['attri_name'].'/'.$lspatharr[0].'-'.$v['updateid'].'.'.$lspatharr[1]);
                          $bg_width -=2;
                          $bg_height -=2;
