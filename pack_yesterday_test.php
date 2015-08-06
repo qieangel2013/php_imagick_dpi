@@ -3,9 +3,9 @@
         ini_set("display_errors", "On");
         error_reporting(E_ALL | E_STRICT);
         date_default_timezone_set('PRC');
-       /* $YMD=date('Ymd',strtotime("-1 day")); 
+        $YMD=date('Ymd',strtotime("-1 day")); 
         $YMDf=date('Y-m-d',strtotime("-1 day")); 
-        $con = mysql_connect("rdsyanyyuabe2mv.mysql.rds.aliyuncs.com","hbdiytop","yM3NESvPEiHtjvIs");
+        $con = mysql_connect("","","");
         mysql_query("set names 'utf8'");//编码转化
         $database='hbdb';
         $data=array();
@@ -110,7 +110,7 @@
             $result=exec($cmd); 
             echo '打包成功';
         }
-           /* $file=$path_pre."/Uploads/".$YMDf.".zip";
+            $file=$path_pre."/Uploads/".$YMDf.".zip";
             $fp = fopen($file, 'r');
             $file2=$YMDf.".zip";
             // 连接FTP
@@ -126,6 +126,6 @@
 
             // 退出
             ftp_close($conn_id);
-            fclose($fp);*/         
+            fclose($fp);      
         
 ?>
